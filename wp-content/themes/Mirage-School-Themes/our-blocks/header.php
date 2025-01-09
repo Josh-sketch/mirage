@@ -23,7 +23,7 @@
         <a href="<?php echo site_url(); ?>" class="logo">
           <img class="mirage-logo" src="<?php echo get_theme_file_uri("images/mirage-logo.png") ?>" />
           <div class="school-name">
-            <span>Mirage</span>
+            <span>Mirage a</span>
             <span>International</span>
             <span>High School</span>
           </div>

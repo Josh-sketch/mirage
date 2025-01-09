@@ -1,3 +1,9 @@
 node_modules/
-images/
-ai1wm-backups
+images-2/
+ai1wm-backups/
+wp-admin/images/
+wp-content/plugins/advanced-custom-fields/assets/images/
+wp-content/plugins/advanced-custom-fields/assets/inc/datepicker/images/
+wp-content/plugins/wp-migrate-db/vendor/container-interop/container-interop/docs/images/
+wp-includes/images/
+wp-includes/js/tinymce/skins/wordpress/images/
