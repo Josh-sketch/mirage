@@ -1,0 +1,115 @@
+footer {
+  padding: 96px;
+  background-color: #444;
+  color: #fff;
+  font-size: 16px;
+  .footer-container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 200px;
+    .school-info,
+    .quick-links,
+    .others {
+      display: flex;
+      font-family: "Work Sans", sans-serif;
+      flex-direction: column;
+      gap: 20px;
+      /* align-items: center; */
+    }
+    .quick-links,
+    .others {
+      gap: 24px;
+    }
+    .school-info {
+      align-items: center;
+      justify-content: start;
+      img {
+        width: 150px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+      .socials {
+        display: flex;
+        gap: 16px;
+        ion-icon {
+          font-size: 28px;
+        }
+      }
+    }
+    h6 {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    .footer-links {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  footer {
+    .footer-container {
+      gap: 150px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  footer {
+    padding: 56px;
+    .footer-container {
+      width: 85rem;
+      gap: 100px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  footer {
+    padding: 48px;
+    .footer-container {
+      width: 55rem;
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 36px;
+    .footer-container {
+      flex-direction: column;
+      width: 25rem;
+      gap: 48px;
+      justify-content: center;
+      align-items: center;
+      .school-info,
+      .quick-links,
+      .others {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  footer {
+    padding: 16px;
+    .footer-container {
+      flex-direction: column;
+      width: 20rem;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      .school-info,
+      .quick-links,
+      .others {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

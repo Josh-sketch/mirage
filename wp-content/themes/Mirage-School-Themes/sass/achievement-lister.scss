@@ -1,0 +1,69 @@
+.about {
+  position: relative;
+}
+.achievements {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 40px auto;
+  column-gap: 200px;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    ion-icon {
+      font-size: 48px;
+      color: #d83838;
+    }
+    .size-6 {
+      height: 48px;
+      width: 48px;
+      color: #d83838;
+    }
+    .stat-text {
+      @include textstyle(24px, #d83838, "", 800);
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .achievements {
+    column-gap: 5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .achievements {
+    width: 900px;
+    justify-content: center;
+    // grid-template-columns: 1fr 1fr 1 120px 120px;
+    column-gap: 5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .achievements {
+    width: 600px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .achievements {
+    width: 300px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 4rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .achievements {
+    width: 180px;
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+  }
+}

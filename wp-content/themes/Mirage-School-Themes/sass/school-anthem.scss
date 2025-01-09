@@ -1,0 +1,75 @@
+.school-pledge {
+  padding: 96px;
+
+  h2 {
+    color: #fff;
+    font-size: 48px;
+    font-family: "Teko", sans-serif;
+    margin-bottom: 48px;
+  }
+  .anthem-flex {
+    display: flex;
+    gap: 200px;
+    p {
+      color: #fff;
+      width: 300px;
+      line-height: 1.7;
+      font-size: 18px;
+      font-family: "Work Sans", sans-serif;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .school-pledge {
+    padding: 96px;
+    .anthem-flex {
+      gap: 100px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .school-pledge {
+    padding: 48px;
+    .anthem-flex {
+      gap: 100px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .school-pledge {
+    padding: 48px;
+    .anthem-flex {
+      margin: 0 auto;
+      width: 550px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .school-pledge {
+    h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+    padding: 24px;
+    .anthem-flex {
+      width: 260px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      p {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+  }
+}

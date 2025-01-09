@@ -1,0 +1,115 @@
+.our-team {
+  padding: 96px;
+  .our-team-container {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .our-team-container-title {
+      text-align: center;
+      h2 {
+        font-size: 48px;
+        font-family: "Teko", sans-serif;
+        color: #333;
+      }
+      p {
+        margin: 0 auto;
+        width: 800px;
+        font-size: 18px;
+        padding: 36px;
+        line-height: 1.5;
+      }
+    }
+
+    .team-members-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+      .team-member-card {
+        background-color: #850000;
+        padding: 16px;
+        border-radius: 10px;
+        .team-member-img {
+          width: 200px;
+          height: 220px;
+          border-radius: 10px;
+        }
+        .member-title-container {
+          display: flex;
+          gap: 5px;
+          flex-direction: column;
+          color: #fff;
+          font-family: "Work Sans", sans-serif;
+          .member-name {
+            font-size: 16px;
+            font-weight: 700;
+          }
+          .member-position,
+          .member-email {
+            font-size: 12px;
+            font-weight: 600;
+            color: #ddd;
+          }
+          .member-email {
+            a {
+              color: #ddd;
+              text-decoration: none;
+              &:hover {
+                color: #fff;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .our-team {
+    padding: 48px;
+    .our-team-container {
+      width: 100%;
+      align-items: center;
+      .our-team-container-title {
+        // width: 80%;
+        p {
+          width: 100%;
+        }
+      }
+      .team-members-container {
+        // width: 80%;
+        grid-template-columns: 235px 235px 235px;
+        gap: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .our-team {
+    padding: 48px;
+    .our-team-container {
+      .team-members-container {
+        // width: 80%;
+        grid-template-columns: 235px 235px;
+        gap: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .our-team {
+    padding: 48px;
+    .our-team-container {
+      .team-members-container {
+        grid-template-columns: 235px;
+        gap: 30px;
+      }
+    }
+  }
+}

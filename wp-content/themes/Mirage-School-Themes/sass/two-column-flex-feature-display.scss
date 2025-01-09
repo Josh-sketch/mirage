@@ -1,0 +1,167 @@
+.our-facilities {
+  display: flex;
+  flex-direction: column;
+  & > :nth-child(odd) {
+    flex-direction: row;
+    color: #9c0303e3;
+
+    .facility-image::before {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 90%;
+      width: 90%;
+      background-color: #850000;
+      bottom: 5%;
+      left: -4%;
+      z-index: -1;
+    }
+  }
+  & > :nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #dadada;
+
+    .facility-image::before {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 90%;
+      width: 90%;
+      background-color: #850000;
+      bottom: 5%;
+      right: -4%;
+      z-index: -1;
+    }
+  }
+  .each-facility-container {
+    padding: 96px;
+    display: flex;
+    gap: 50px;
+    .facility-image {
+      position: relative;
+      z-index: 6;
+      img {
+        width: 600px;
+        height: 90%;
+      }
+    }
+    .facility-description {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h3 {
+        font-size: 38px;
+        font-family: "Teko", sans-serif;
+      }
+      p {
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.5;
+      }
+      ul {
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .our-facilities {
+    .each-facility-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .facility-image {
+        img {
+          width: 100%;
+          height: 90%;
+        }
+      }
+      .facility-description {
+        h3 {
+          font-size: 32px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .our-facilities {
+    .each-facility-container {
+      grid-template-columns: 1fr;
+      .facility-image {
+        img {
+          height: 400px;
+        }
+      }
+      .facility-description {
+        h3 {
+          font-size: 32px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .our-facilities {
+    .each-facility-container {
+      padding: 48px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .our-facilities {
+    .each-facility-container {
+      grid-template-columns: 1fr;
+      .facility-image {
+        img {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .our-facilities {
+    .each-facility-container {
+      padding: 24px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      .facility-image {
+        img {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .our-facilities {
+    .each-facility-container {
+      gap: 16px;
+      .facility-image {
+        img {
+          height: 250px;
+          width: 250px;
+        }
+      }
+      .facility-description {
+        gap: 16px;
+        h3 {
+          font-size: 24px;
+          line-height: 1.2;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.mirage-table {
+  padding: 96px;
+  display: flex;
+  justify-content: center;
+  .event-table {
+    width: 1200px;
+    font-family: "Open Sans", sans-serif;
+    border-collapse: collapse;
+
+    caption {
+      text-align: left;
+      background-color: #000;
+      color: #fff;
+      padding: 16px 24px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    tbody tr td {
+      padding: 16px 24px;
+      font-size: 20px;
+      color: #666;
+    }
+
+    tbody > :nth-child(odd) {
+      background-color: #fcf8f8;
+    }
+
+    tbody > :nth-child(even) {
+      background-color: #f1eeee;
+    }
+  }
+}

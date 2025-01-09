@@ -1,0 +1,114 @@
+.contact {
+  font-family: "Work Sans", sans-serif;
+  background-color: #d00000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  padding: 96px;
+  h2 {
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+  }
+  .form {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      label {
+        font-size: 16px;
+      }
+      input {
+        height: 24px;
+        font-size: 18px;
+      }
+      textarea {
+        height: 100px;
+        font-size: 18px;
+      }
+    }
+
+    .alert {
+      display: none;
+      color: #b59e21;
+      font-style: italic;
+      font-size: 1.6rem;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      font-family: "Work Sans", sans-serif;
+      .read-more-btn {
+        background-color: #b59e21;
+        display: inline-block;
+        padding: 8px 16px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 18px;
+        letter-spacing: 1px;
+        &:hover {
+          background-color: darken(#b59e21, 10%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .contact {
+    .form {
+      width: 950px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    padding: 48px;
+    .form {
+      width: 800px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contact {
+    padding: 48px;
+    .form {
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 36px;
+    .form {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .contact {
+    padding: 16px;
+    .form {
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,292 @@
+@mixin hero-position($position) {
+  height: 570px;
+  width: 100%;
+  position: $position;
+}
+
+.slideshow {
+  background-color: #444;
+  color: #fff;
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  .slide {
+    display: none;
+    height: 570px;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    .slideshow-texts {
+      transform: translateY(-50%);
+      width: 80rem;
+      // padding: 0 24px;
+      position: absolute;
+      top: 50%;
+      left: 18%;
+      color: #fff;
+      .full-width {
+        width: 80rem;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        h1 {
+          color: #fff;
+          display: flex;
+          gap: 15px;
+          font-size: 48px;
+          font-family: "Teko", sans-serif;
+          span {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            @include textstyle(40px, "", $tekoFont, 700);
+            margin-bottom: 0px;
+            &::first-letter {
+              font-size: 64px;
+            }
+          }
+        }
+        .text-span {
+          word-wrap: break-word; /* Breaks long words */
+          word-break: break-word;
+          overflow-wrap: break-word;
+          width: 98%;
+          display: inline-block;
+          transform: translateX(42px);
+          @include textstyle(20px, "", $openSanFont, 900);
+          letter-spacing: 0px;
+          line-height: 1.4;
+          margin-bottom: 20px;
+        }
+        .slide-btn {
+          width: 18rem;
+          transform: translateX(42px);
+          @include textstyle("", $whiteColor, "", 700);
+          background-color: $redColor;
+          padding: 8px 24px;
+          &:hover {
+            background-color: darken($redColor, 15%);
+          }
+        }
+        .hero-btn {
+          text-decoration: none;
+          @include textstyle(20px, $whiteColor, $tekoFont, "");
+          span {
+            @include textstyle(20px, $whiteColor, $tekoFont, "");
+            letter-spacing: 2px;
+            display: inline-block;
+            &::first-letter {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .backend {
+    display: block;
+  }
+  .slideshow-controls {
+    position: absolute;
+    bottom: 48px;
+    right: 48px;
+    z-index: 4;
+    display: flex;
+    gap: 16px;
+    .controls {
+      height: 48px;
+      width: 48px;
+      background-color: $whiteColor;
+      border-radius: 50%;
+      @include flexbox(center);
+      align-items: center;
+      cursor: pointer !important;
+      ion-icon {
+        display: block;
+        color: $redColor;
+        font-size: 20px;
+      }
+      .pause {
+        transition: display 0.5s ease-in-out;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        // overflow: hidden;
+      }
+      .stop {
+        display: none;
+      }
+      .play {
+        display: none;
+      }
+      .active {
+        display: block;
+      }
+    }
+  }
+
+  .active {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1350px) {
+}
+
+@media (max-width: 1200px) {
+  .slideshow {
+    .slide {
+      .slideshow-texts {
+        width: 65rem;
+        left: 13%;
+        div {
+          h1 {
+            span {
+              font-size: 36px;
+              &::first-letter {
+                font-size: 56px;
+              }
+            }
+          }
+          .text-span {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .slideshow {
+    height: 72rem;
+    .slide {
+      height: 40rem;
+      .slideshow-texts {
+        height: 32rem;
+        width: 100%;
+        padding: 2.4rem 4.8rem;
+        // left: 13%;
+        transform: translateY(40rem);
+        top: 0%;
+        left: 0%;
+        background-color: #a60000;
+        div {
+          width: 100%;
+          h1 {
+            span {
+              font-size: 36px;
+              &::first-letter {
+                font-size: 56px;
+              }
+            }
+          }
+          .text-span {
+            width: 100%;
+            font-size: 18px;
+            transform: translateX(0);
+          }
+          .slide-btn {
+            background-color: #a2923b;
+            transform: translateX(0);
+            &:hover {
+              background-color: lighten(#a2923b, 15%);
+            }
+          }
+        }
+      }
+    }
+    .slideshow-controls {
+      top: 38rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .slideshow {
+    .slide {
+      .slideshow-texts {
+        transform: translateY(40rem);
+        top: 0%;
+        left: 0%;
+        background-color: #a60000;
+        div {
+          width: 100%;
+          h1 {
+            span {
+              font-size: 30px;
+              &::first-letter {
+                font-size: 48px;
+              }
+            }
+          }
+          .text-span {
+            font-size: 16px;
+          }
+          .slide-btn {
+            width: 13rem;
+            background-color: #a2923b;
+            transform: translateX(0);
+            padding: 8px 16px;
+            &:hover {
+              background-color: lighten(#a2923b, 15%);
+            }
+          }
+          .hero-btn {
+            font-size: 16px;
+            span {
+              font-size: 16px;
+              letter-spacing: 1px;
+              &::first-letter {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .slideshow-controls {
+      top: 38rem;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .slideshow {
+    height: 60rem;
+    .slide {
+      height: 30rem;
+      .slideshow-texts {
+        transform: translateY(30rem);
+        height: 30rem;
+        div {
+          h1 {
+            span {
+              font-size: 18px;
+              &::first-letter {
+                font-size: 24px;
+              }
+            }
+          }
+          .text-span {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .slideshow-controls {
+      top: 28rem;
+      right: 10px;
+      .controls {
+        height: 36px;
+        width: 36px;
+        ion-icon {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

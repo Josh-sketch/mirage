@@ -1,0 +1,67 @@
+$whiteColor: #fff;
+$redColor: #ff0000;
+$flex-display: flex;
+$small-text-size: 16px;
+$medium-text-size: 32px;
+$verdanaFont: Verdana, Geneva, Tahoma, sans-serif;
+$openSanFont: "Open Sans", sans-serif;
+$tekoFont: "Teko", sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  background: white;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.wp-block-post-content {
+  p {
+    font-size: 16px;
+  }
+}
+
+.open {
+  opacity: 0.8;
+}
+
+.close {
+  opacity: 0;
+}
+
+.active {
+  display: block;
+}
+
+.our-placeholder-block {
+  height: 7.2rem;
+  font-size: 3.6rem;
+  padding: auto;
+  background-color: #a60000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: $tekoFont;
+}
+
+@media (max-width: 1350px) {
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+}

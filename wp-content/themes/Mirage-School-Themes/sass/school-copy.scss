@@ -1,0 +1,251 @@
+.about-mirage {
+  padding: 72px 0;
+  position: relative;
+  .about-mirage-content {
+    width: 1200px;
+    height: 480px;
+    margin: 0 auto;
+    display: flex;
+    gap: 96px;
+    align-items: center;
+    .block-editor-block-list__layout {
+      display: flex;
+      gap: 96px;
+    }
+    .about-video {
+      position: relative;
+      .school-video {
+        height: 480px;
+        width: 480px;
+        border-radius: 50%;
+      }
+      ion-icon {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 40%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+        font-size: 72px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-family: "Work Sans", sans-serif;
+      .block-editor-block-list__layout {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      h2 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      span {
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .button-div {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .first-set,
+        .second-set {
+          display: flex;
+          gap: 12px;
+          button {
+            background-color: #d00000;
+            border-radius: 3px;
+            a {
+              font-family: "Work Sans", sans-serif;
+              display: inline-block;
+              padding: 10px 16px;
+              color: #fff;
+              text-decoration: none;
+              font-weight: 900;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+  .motto {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+  }
+}
+
+@media (max-width: 1350px) {
+  .about-mirage {
+    .about-mirage-content {
+      gap: 48px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-mirage {
+    padding: 96px;
+    height: max-content;
+    .about-mirage-content {
+      margin: 0;
+      justify-content: start;
+      align-items: flex-start;
+      width: 600px;
+      height: 100%;
+      gap: 24px;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-mirage {
+    padding: 48px;
+    height: max-content;
+    .about-mirage-content {
+      margin: 0;
+      justify-content: start;
+      align-items: flex-start;
+      width: 450px;
+      height: 100%;
+      gap: 24px;
+      flex-direction: column;
+      .about-video {
+        .school-video {
+          height: 360px;
+          width: 360px;
+        }
+        ion-icon {
+          font-size: 56px;
+        }
+      }
+      .about-text {
+        h2 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    .motto {
+      bottom: 0px;
+      svg {
+        text {
+          font-size: 36px;
+        }
+        & > :first-child {
+          transform: translateX(60px);
+        }
+        & > :last-child {
+          transform: translateX(75px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about-mirage {
+    padding: 24px;
+    .about-mirage-content {
+      width: 280px;
+      gap: 18px;
+      flex-direction: column;
+      .about-video {
+        .school-video {
+          height: 240px;
+          width: 240px;
+        }
+        ion-icon {
+          font-size: 32px;
+        }
+      }
+      .about-text {
+        h2 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .motto {
+      bottom: -32px;
+      right: 5px;
+      svg {
+        // width: 150px;
+        transform: translateY(10px);
+        text {
+          font-size: 24px;
+        }
+        & > :first-child {
+          transform: translateX(130px);
+        }
+        & > :last-child {
+          transform: translate(175px, -20px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .about-mirage {
+    padding: 16px;
+    .about-mirage-content {
+      width: 200px;
+      .about-video {
+        .school-video {
+          height: 150px;
+          width: 150px;
+        }
+      }
+      .about-text {
+        h1,
+        p,
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+    .motto {
+      svg {
+        text {
+          font-size: 16px;
+        }
+        & > :first-child {
+          transform: translate(160px, 5px);
+        }
+        & > :last-child {
+          transform: translate(220px, -30px);
+        }
+      }
+    }
+  }
+}

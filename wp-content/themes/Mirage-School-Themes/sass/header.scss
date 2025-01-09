@@ -1,0 +1,484 @@
+@mixin flexbox($position) {
+  display: $flex-display;
+  justify-content: $position;
+}
+
+@mixin textstyle($fontsize, $color, $family, $weight) {
+  font-size: $fontsize;
+  color: $color;
+  font-family: $family;
+  font-weight: $weight;
+}
+
+@mixin beforeAndAfter($width, $height, $top, $bottom, $left, $right, $color) {
+  position: absolute;
+  content: "";
+  width: $width;
+  height: $height;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+  background-color: $color;
+}
+
+@mixin list-partition($width) {
+  position: absolute;
+  top: -8px;
+  content: "";
+  background-color: $whiteColor;
+  width: $width;
+  height: 3.8rem;
+}
+
+@mixin divbackground($url, $size, $position, $repeat) {
+  background-image: url + '("' + $url + '")';
+  background-size: $size; /* Adjust the background size */
+  background-position: $position; /* Center the background image */
+  background-repeat: $repeat; /* Prevent tiling */
+}
+
+@mixin rightAndLeft($right, $left) {
+  top: 50%;
+  left: $left;
+  right: $right;
+  transform: translateY(-50%);
+}
+
+.home_page_header {
+  a {
+    text-decoration: none;
+    color: $whiteColor;
+    &:hover {
+      color: #e8d154;
+    }
+  }
+}
+
+.top-navigation {
+  font-family: $verdanaFont;
+  @include flexbox(space-between);
+  background-color: black;
+
+  ul {
+    list-style: none;
+    display: $flex-display;
+    height: 4rem;
+    padding: 0;
+
+    li {
+      align-self: center;
+      @include textstyle($small-text-size, "", $whiteColor, "");
+      text-transform: uppercase;
+      position: relative;
+      margin: 0px 2rem;
+
+      &::after {
+        @include beforeAndAfter(1px, 3.8rem, -8px, "", "", -2rem, $whiteColor);
+      }
+
+      .search-icon {
+        color: #fff;
+        font-size: 2rem;
+        --ionicon-stroke-width: 64px;
+      }
+    }
+  }
+}
+
+.right-navigation ul li {
+  &:first-child {
+    &::before {
+      @include list-partition(1px);
+      left: -2rem;
+    }
+    &::after {
+      @include list-partition(0.5px);
+      width: 0.5px;
+    }
+  }
+
+  &:last-child {
+    padding: 0;
+    display: flex;
+    gap: 0;
+    input {
+      outline: none;
+      display: none;
+      height: 100%;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      font-size: 2rem;
+    }
+  }
+}
+
+.home_page_navigation {
+  @include flexbox(space-around);
+  height: 12rem;
+  padding: 1rem 7.2rem 1.2rem 10rem;
+
+  .logo {
+    position: relative;
+    display: $flex-display;
+    align-items: center;
+
+    .mirage-logo {
+      height: 15rem;
+      width: 15rem;
+    }
+
+    .school-name {
+      display: $flex-display;
+      flex-direction: column;
+      text-transform: uppercase;
+
+      & > :nth-child(1),
+      & > :nth-child(2) {
+        @include textstyle($medium-text-size, #ff0000, "", "");
+      }
+
+      & > :nth-child(3) {
+        @include textstyle(2rem, #333, "", "");
+      }
+    }
+  }
+}
+
+.home_page_nav_list {
+  height: 100%;
+  @include flexbox(center);
+  .main-nav-list {
+    @include flexbox(center);
+    font-size: $small-text-size;
+    gap: 4rem;
+    font-family: $verdanaFont;
+    font-weight: 500;
+
+    li {
+      align-self: center;
+      list-style: none;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -1.6rem;
+        width: 0;
+        height: 3px;
+        border-radius: 1px;
+        background-color: #a60000;
+        transition: width 0.3s ease;
+      }
+      &:hover {
+        &::after {
+          // display: block;
+          width: 100%;
+        }
+      }
+
+      a {
+        color: #000;
+        &:hover,
+        a:active {
+          color: #a60000;
+        }
+      }
+    }
+    .active {
+      a {
+        color: #a60000;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -1.6rem;
+        width: 100%;
+        height: 3px;
+        border-radius: 1px;
+        background-color: #a60000;
+        transition: width 0.3s ease;
+      }
+    }
+  }
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 20;
+  .icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 1350px) {
+  .home_page_navigation {
+    gap: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    .logo {
+      .school-name {
+        & > :nth-child(1),
+        & > :nth-child(2) {
+          @include textstyle(2.8rem, #ff0000, "", "");
+        }
+
+        & > :nth-child(3) {
+          @include textstyle(1.8rem, #333, "", "");
+        }
+      }
+    }
+  }
+
+  .home_page_nav_list {
+    .main-nav-list {
+      font-size: 1.4rem;
+      gap: 3.2rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .home_page_navigation {
+    gap: 1rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    .logo {
+      .school-name {
+        & > :nth-child(1),
+        & > :nth-child(2) {
+          @include textstyle(2.4rem, #ff0000, "", "");
+        }
+
+        & > :nth-child(3) {
+          @include textstyle(1.2rem, #333, "", "");
+        }
+      }
+    }
+  }
+
+  .home_page_nav_list {
+    .main-nav-list {
+      font-size: 1.2rem;
+      gap: 2rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .top-navigation {
+    display: none;
+  }
+
+  .home_page_nav_list {
+    .main-nav-list {
+      display: none;
+    }
+  }
+
+  .home_page_navigation {
+    justify-content: space-between;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .mobile-nav {
+    background-color: #000000f7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // height: 100vh;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding: 4.8rem 4.8rem 9.6rem 4.8rem;
+
+    div {
+      color: #fff;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      border: 1px solid #fff;
+      padding: 8px;
+      border-radius: 3px;
+
+      input {
+        background-color: #000;
+        border: none;
+        outline: none;
+        width: 100%;
+        color: #fff;
+        font-size: 1.8rem;
+      }
+      .search-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      padding-left: 0;
+      flex-direction: column;
+      gap: 1.6rem;
+      font-weight: 700;
+      justify-content: center;
+      align-items: center;
+      li {
+      }
+    }
+    .mobile-top-navigation {
+      font-family: $verdanaFont;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    .mobile-main-nav-list {
+      font-family: $verdanaFont;
+      font-size: 1.6rem;
+      &::after {
+        transform: translateX(-50%);
+        position: absolute;
+        content: "";
+        bottom: 40%;
+        left: 50%;
+        width: 80%;
+        height: 1px;
+        background-color: #fff;
+      }
+    }
+
+    .btn-mobile-nav {
+      color: #fff;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      .icon-mobile-nav {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .home_page_navigation {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 1rem;
+    .logo {
+      .mirage-logo {
+        height: 12rem;
+        width: 12rem;
+      }
+      .school-name {
+        & > :nth-child(1),
+        & > :nth-child(2) {
+          @include textstyle(1.6rem, #ff0000, "", "");
+        }
+
+        & > :nth-child(3) {
+          @include textstyle(1.2rem, #333, "", "");
+        }
+      }
+    }
+  }
+
+  .home_page_header {
+    gap: 12rem;
+  }
+
+  .home_page_nav_list {
+    .main-nav-list {
+      font-size: 1.2rem;
+      gap: 1.6rem;
+    }
+  }
+
+  .top-navigation {
+    transform: translateY(-5rem);
+    ul {
+      li {
+        font-size: 1rem;
+        .search-icon {
+          font-size: 1.2rem;
+          --ionicon-stroke-width: 16px;
+        }
+      }
+    }
+
+    &::before {
+      top: -15%;
+    }
+  }
+
+  .right-navigation {
+    ul li {
+      &:last-child {
+        top: -32rem;
+        height: 2.4rem;
+        padding: 4px;
+        gap: 8px;
+        input {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .btn-mobile-nav {
+    top: -8rem;
+    right: 1.6rem;
+    .icon-mobile-nav {
+      height: 3.6rem;
+      width: 3.6rem;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .home_page_navigation {
+    gap: 1rem;
+    .logo {
+      .mirage-logo {
+        height: 10rem;
+        width: 10rem;
+      }
+      .school-name {
+        & > :nth-child(1),
+        & > :nth-child(2) {
+          @include textstyle(1.2rem, #ff0000, "", "");
+        }
+
+        & > :nth-child(3) {
+          @include textstyle(1rem, #333, "", "");
+        }
+      }
+    }
+  }
+
+  .btn-mobile-nav {
+    .icon-mobile-nav {
+      height: 3.6rem;
+      width: 3.6rem;
+    }
+  }
+}

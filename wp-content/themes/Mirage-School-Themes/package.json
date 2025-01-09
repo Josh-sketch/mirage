@@ -1,0 +1,21 @@
+{
+  "name": "mirage-school-theme",
+  "version": "1.0.0",
+  "description": "website for high schools",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style/main.css -w",
+    "start": "wp-scripts start src/index.js our-blocks/header.js our-blocks/banner.js our-blocks/herotitle.js our-blocks/slideshow.js our-blocks/slide.js our-blocks/slidetext.js our-blocks/slidebutton.js our-blocks/achievementboard.js our-blocks/testimonial.js our-blocks/blackandwhitesvg.js  our-blocks/videoplayer.js our-blocks/copy.js our-blocks/copytext.js our-blocks/schoolmotto.js our-blocks/whiteandredsvg.js our-blocks/titleblock.js our-blocks/gallery.js our-blocks/blogandevent.js our-blocks/form.js our-blocks/footer.js our-blocks/schoolowneraddress.js our-blocks/carousel.js our-blocks/mission.js our-blocks/values.js our-blocks/team.js our-blocks/anthem.js our-blocks/transportation.js our-blocks/accreditation.js our-blocks/titledescription.js our-blocks/listers.js our-blocks/cta.js our-blocks/curriculum.js",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "josh-adekunle",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/icons": "^10.7.0",
+    "@wordpress/scripts": "^30.5.1",
+    "node-sass": "^9.0.0",
+    "normalize.css": "^8.0.1"
+  }
+}

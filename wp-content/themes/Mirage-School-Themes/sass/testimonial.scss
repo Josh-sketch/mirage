@@ -1,0 +1,328 @@
+/***************Testimonial********/
+.testimonial {
+  flex-direction: column;
+  height: 50rem;
+  @include flexbox(center);
+  align-items: center;
+  position: relative;
+  padding: 96px;
+  .quote-block {
+    position: relative;
+    .quote {
+      height: 36px;
+      width: 48px;
+      display: block;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      @include beforeAndAfter(200px, 2px, 50%, "", 70px, "", #ccc);
+    }
+    &::before {
+      position: absolute;
+      content: ""; /* Still needed to create the pseudo-element */
+      @include beforeAndAfter(200px, 2px, 50%, "", "", 70px, #ccc);
+    }
+  }
+
+  .testimonial-container {
+    width: 90rem;
+    display: flex;
+    gap: 0;
+  }
+
+  .testimonial-text {
+    display: none;
+    width: 90rem;
+    transition: display 3s ease-in-out;
+    div {
+      text-align: center;
+      width: 90rem;
+      color: white;
+      margin: 48px auto;
+    }
+    .size-large {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+    .size-medium {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+    .size-small {
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .testimonial-author {
+      text-transform: uppercase;
+      font-size: 16px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+    .lightYellow {
+      color: #e2c629f3;
+    }
+    .lightRed {
+      color: #f03e3e;
+    }
+    .lightBlue {
+      color: #1c7ed6;
+    }
+    .white {
+      color: #ffffff;
+    }
+  }
+
+  .active {
+    display: block;
+  }
+
+  .testimonial-control {
+    position: absolute;
+    cursor: pointer;
+    ion-icon {
+      color: #fff;
+      font-size: 72px;
+      font-weight: 300;
+    }
+  }
+  .right {
+    @include rightAndLeft(150px, "");
+  }
+
+  .left {
+    @include rightAndLeft("", 150px);
+  }
+}
+
+@media (max-width: 1350px) {
+  .testimonial {
+    .testimonial-container {
+      width: 70rem;
+    }
+    .testimonial-text {
+      width: 70rem;
+      div {
+        width: 70rem;
+      }
+      .size-large {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .testimonial {
+    padding: 48px;
+    .testimonial-container {
+      width: 85.2rem;
+    }
+    .testimonial-text {
+      width: 85.2rem;
+      div {
+        width: 85.2rem;
+      }
+      .size-large {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .testimonial {
+    padding: 48px;
+    .testimonial-container {
+      width: 85.2rem;
+    }
+    .testimonial-text {
+      width: 85.2rem;
+      div {
+        width: 85.2rem;
+      }
+      .size-large {
+        font-size: 28px;
+      }
+      .medium-large {
+        font-size: 24px;
+      }
+      .small-large {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .testimonial {
+    padding: 48px;
+    .testimonial-container {
+      width: 85.2rem;
+    }
+    .testimonial-text {
+      width: 85.2rem;
+      div {
+        width: 85.2rem;
+      }
+      .size-large {
+        font-size: 28px;
+      }
+      .medium-large {
+        font-size: 24px;
+      }
+      .small-large {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonial {
+    padding: 48px;
+    .testimonial-container {
+      width: 55.5rem;
+    }
+    .testimonial-text {
+      width: 55.5rem;
+      div {
+        width: 55.5rem;
+      }
+      .size-large {
+        font-size: 20px;
+      }
+      .size-medium {
+        font-size: 18px;
+      }
+      .size-small {
+        font-size: 16px;
+      }
+    }
+    .testimonial-control {
+      ion-icon {
+        font-size: 32px;
+        font-weight: 200;
+      }
+    }
+    .right {
+      top: 85%;
+      transform: translateY(0);
+      right: 40%;
+    }
+    .left {
+      top: 85%;
+      transform: translateY(0);
+      left: 40%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial {
+    padding: 24px;
+    .quote-block {
+      .quote {
+        height: 24px;
+        width: 32px;
+      }
+      &::after {
+        width: 100px;
+        left: 56px;
+      }
+      &::before {
+        width: 100px;
+        right: 56px;
+      }
+    }
+    .testimonial-container {
+      width: 26rem;
+    }
+    .testimonial-text {
+      width: 26rem;
+      div {
+        width: 26rem;
+      }
+      .size-large {
+        margin: 16px 0;
+        font-size: 18px;
+      }
+      .size-medium {
+        margin: 16px 0;
+        font-size: 15px;
+      }
+      .size-small {
+        margin: 16px 0;
+        font-size: 12px;
+      }
+
+      .testimonial-author {
+        font-size: 12px;
+      }
+    }
+    .testimonial-control {
+      ion-icon {
+        font-size: 24px;
+        font-weight: 200;
+      }
+    }
+    .right {
+      right: 40%;
+      top: 93%;
+    }
+    .left {
+      top: 93%;
+      right: 40%;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .testimonial {
+    .quote-block {
+      .quote {
+        height: 24px;
+        width: 32px;
+      }
+      &::after {
+        width: 50px;
+        left: 40px;
+      }
+      &::before {
+        width: 50px;
+        right: 40px;
+      }
+    }
+    .testimonial-container {
+      width: 20rem;
+    }
+    .testimonial-text {
+      width: 20rem;
+      div {
+        width: 20rem;
+      }
+      .size-large,
+      .medium-size,
+      .small-size {
+        font-size: 14px;
+      }
+
+      .testimonial-author {
+        font-size: 10px;
+      }
+    }
+    .testimonial-control {
+      ion-icon {
+        font-size: 24px;
+        font-weight: 200;
+      }
+    }
+    .right {
+      right: 35%;
+    }
+    .left {
+      left: 35%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+/* Styles for the block editor */
+.our-placeholder-block {
+  background-color: #f9f9f9; /* Light gray background for visibility */
+  border: 2px dashed #0073aa; /* Dashed border with WordPress blue color */
+  color: #555; /* Neutral text color */
+  padding: 20px; /* Spacing around the block */
+  font-size: 16px; /* Standard font size */
+  font-family: Arial, sans-serif; /* Clean, readable font */
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Slightly rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto; /* Add spacing between blocks */
+  max-width: 600px; /* Limit width for better layout */
+}
+
+/* Style for hover or focus to enhance interactivity */
+.our-placeholder-block:hover,
+.our-placeholder-block:focus {
+  background-color: #eef6fc; /* Slightly lighter background on hover */
+  border-color: #005177; /* Darker border color */
+  color: #222; /* Slightly darker text */
+}

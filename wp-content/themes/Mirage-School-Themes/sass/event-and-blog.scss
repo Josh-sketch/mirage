@@ -1,0 +1,230 @@
+.school-event {
+  transform: translateY(-56px);
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0px auto;
+  .blog {
+    background-color: #a60000;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    color: #fff;
+    .blog-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .blog-summary {
+        display: none;
+        img {
+          width: 100%;
+          height: 450px;
+        }
+        .blog-content {
+          padding: 48px 72px;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          .blog-category {
+            display: block;
+            font-family: "IBM Plex Sans", sans-serif;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 700;
+            color: #e8d154;
+          }
+          .blog-title {
+            font-family: "Lora", serif;
+            font-size: 36px;
+            font-weight: 500;
+          }
+          .blog-excerpt {
+            font-family: "Open Sans", sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.9;
+          }
+        }
+      }
+      .active {
+        display: block;
+      }
+    }
+    .blog-nav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 24px;
+      align-items: center;
+      div {
+        svg {
+          color: #b59e21;
+          height: 48px;
+          width: 48px;
+          &:hover {
+            color: #e8d154;
+            cursor: pointer;
+          }
+        }
+        a {
+          font-size: 24px;
+          color: #fff;
+          text-decoration: none;
+          color: #b59e21;
+          &:hover {
+            color: #e8d154;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .event-calendar {
+    background-color: #fae6e6;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    .calender-item {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      column-gap: 24px;
+      align-items: end;
+      color: #a60000;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #d00000;
+      .event-date {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 6px;
+        align-items: flex-end;
+        .month-date {
+          font-family: "Lora", serif;
+          text-transform: uppercase;
+          font-size: 18px;
+          display: block;
+          font-style: italic;
+        }
+        .number-date {
+          font-family: "Lora", serif;
+          font-size: 64px;
+          display: flex;
+          font-style: italic;
+          transform: translateY(13px);
+        }
+      }
+      .event-title {
+        .event-main-title {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+          font-size: 18px;
+          letter-spacing: 1px;
+        }
+
+        .event-time {
+          letter-spacing: 2px;
+          font-family: "Open Sans", sans-serif;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .calender-title {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: uppercase;
+      color: #a60000;
+      font-size: 20px;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    font-family: "Work Sans", sans-serif;
+    .read-more-btn {
+      background-color: #b59e21;
+      display: inline-block;
+      padding: 8px 14px;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .school-event {
+    width: 100rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .school-event {
+    width: 90rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    .event-calendar {
+      padding: 32px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .school-event {
+    transform: translateY(-32px);
+    width: 60rem;
+    grid-template-columns: 1fr;
+    .event-calendar {
+      padding: 64px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .school-event {
+    transform: translateY(0px);
+    width: 100%;
+    grid-template-columns: 1fr;
+    .blog {
+      .blog-container {
+        .blog-summary {
+          .blog-content {
+            padding: 24px 36px;
+          }
+        }
+      }
+    }
+    .event-calendar {
+      padding: 32px;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .school-event {
+    width: 250px;
+    margin: 0;
+    .blog {
+      width: 250px;
+      .blog-container {
+        .blog-summary {
+          img {
+            width: 250px;
+            height: 350px;
+          }
+          .blog-content {
+            padding: 24px 16px;
+          }
+        }
+      }
+    }
+    .event-calendar {
+      width: 250px;
+      padding: 16px;
+    }
+  }
+}

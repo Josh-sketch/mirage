@@ -1,0 +1,16 @@
+h1 {
+  display: flex;
+  gap: 15px;
+  span {
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    color: #fae6e6;
+    &::first-letter {
+      font-size: 70px;
+    }
+  }
+}

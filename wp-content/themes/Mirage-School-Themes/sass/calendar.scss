@@ -1,0 +1,178 @@
+.academic-calendar {
+  padding: 96px;
+  background-color: #dadada;
+  h2 {
+    text-align: center;
+    font-size: 38px;
+    font-family: "Teko", sans-serif;
+    margin: 32px;
+  }
+  .calendar-container {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.4fr;
+    padding: 24px;
+    background-color: #fff;
+    .calendar-tab,
+    .calendar-event {
+      padding: 32px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #850000;
+      }
+    }
+    .calendar {
+      border-collapse: collapse;
+      font-family: "Open Sans", sans-serif;
+      caption {
+        padding: 16px 0;
+      }
+      th {
+        font-weight: 500;
+      }
+      .calendar-day {
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    .calendar-event {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      .calendar-event-nav {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        input {
+          width: 200px;
+          font-size: 20px;
+          padding: 18px;
+          border: solid 2px #850000;
+          border-radius: 32px;
+        }
+      }
+      .calendar-event-description {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .calendar-event-title {
+          display: block;
+          font-size: 32px;
+          text-align: center;
+          line-height: 1.3;
+          font-family: "Work San", sans-serif;
+          color: #3d0000;
+        }
+        p {
+          font-size: 16px;
+          font-family: "Work San", sans-serif;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .event-details-info {
+      margin: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      font-family: "Open San", sans-serif;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        color: #444;
+        & > :nth-child(2) {
+          font-size: 20px;
+        }
+      }
+      span {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.calendar-event-nav .event-nav-btn,
+.curriculum-category-nav .event-nav-btn {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 18px;
+  border-radius: 32px;
+  background-color: #850000;
+  color: #fff;
+  font-family: "Work San", sans-serif;
+  &:hover {
+    background-color: lighten(#850000, 10%);
+    color: #ddd;
+  }
+}
+
+.calendar-event-nav .event-nav-btn,
+.curriculum-category-nav .active-control {
+  background-color: lighten(#850000, 10%);
+  color: #ddd;
+}
+
+.fa-solid {
+  display: block;
+}
+
+.fa-chevron-right {
+  position: relative;
+  margin-left: 16px;
+  z-index: 3;
+}
+
+.fa-chevron-left {
+  margin-right: 16px;
+  position: relative;
+  z-index: 3;
+}
+
+.fa-chevron-right::after,
+.fa-chevron-left::after {
+  background-color: #88888876;
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  top: 0;
+  left: 0px;
+  transform: translate(-30%, -25%);
+  z-index: 1;
+  display: none;
+  border-radius: 50%;
+}
+
+.fa-chevron-right:hover::after,
+.fa-chevron-left:hover::after {
+  display: block;
+  cursor: pointer;
+}
+
+.event-select {
+  background-color: #850000;
+  color: #fff;
+}
+
+.event-select:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .calendar-event-nav .event-nav-btn,
+  .curriculum-category-nav .event-nav-btn {
+    font-size: 12px;
+    padding: 16px;
+  }
+}
