@@ -196,6 +196,18 @@
           flex-direction: column-reverse;
         }
       }
+      div {
+        .history-details {
+          div {
+            gap: 56px;
+            .history-content {
+              .history-paragraph {
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

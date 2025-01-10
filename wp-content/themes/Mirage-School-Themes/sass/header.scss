@@ -249,34 +249,34 @@
   }
 }
 
+// @media (max-width: 1200px) {
+//   .home_page_navigation {
+//     gap: 1rem;
+//     padding-left: 2.4rem;
+//     padding-right: 2.4rem;
+//     .logo {
+//       .school-name {
+//         & > :nth-child(1),
+//         & > :nth-child(2) {
+//           @include textstyle(2.4rem, #ff0000, "", "");
+//         }
+
+//         & > :nth-child(3) {
+//           @include textstyle(1.2rem, #333, "", "");
+//         }
+//       }
+//     }
+//   }
+
+//   .home_page_nav_list {
+//     .main-nav-list {
+//       font-size: 1.2rem;
+//       gap: 2rem;
+//     }
+//   }
+// }
+
 @media (max-width: 1200px) {
-  .home_page_navigation {
-    gap: 1rem;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-    .logo {
-      .school-name {
-        & > :nth-child(1),
-        & > :nth-child(2) {
-          @include textstyle(2.4rem, #ff0000, "", "");
-        }
-
-        & > :nth-child(3) {
-          @include textstyle(1.2rem, #333, "", "");
-        }
-      }
-    }
-  }
-
-  .home_page_nav_list {
-    .main-nav-list {
-      font-size: 1.2rem;
-      gap: 2rem;
-    }
-  }
-}
-
-@media (max-width: 900px) {
   .top-navigation {
     display: none;
   }
