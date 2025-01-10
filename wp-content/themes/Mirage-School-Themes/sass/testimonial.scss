@@ -1,7 +1,7 @@
 /***************Testimonial********/
 .testimonial {
   flex-direction: column;
-  height: 50rem;
+  height: 55rem;
   @include flexbox(center);
   align-items: center;
   position: relative;
@@ -126,55 +126,30 @@
         width: 85.2rem;
       }
       .size-large {
-        font-size: 28px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  .testimonial {
-    padding: 48px;
-    .testimonial-container {
-      width: 85.2rem;
-    }
-    .testimonial-text {
-      width: 85.2rem;
-      div {
-        width: 85.2rem;
-      }
-      .size-large {
-        font-size: 28px;
+        font-size: 24px;
       }
       .medium-large {
-        font-size: 24px;
+        font-size: 20px;
       }
       .small-large {
         font-size: 18px;
       }
     }
-  }
-}
-@media (max-width: 1200px) {
-  .testimonial {
-    padding: 48px;
-    .testimonial-container {
-      width: 85.2rem;
+    .testimonial-control {
+      ion-icon {
+        font-size: 32px;
+        font-weight: 200;
+      }
     }
-    .testimonial-text {
-      width: 85.2rem;
-      div {
-        width: 85.2rem;
-      }
-      .size-large {
-        font-size: 28px;
-      }
-      .medium-large {
-        font-size: 24px;
-      }
-      .small-large {
-        font-size: 18px;
-      }
+    .right {
+      top: 80%;
+      transform: translateY(0);
+      right: 45%;
+    }
+    .left {
+      top: 80%;
+      transform: translateY(0);
+      left: 45%;
     }
   }
 }
