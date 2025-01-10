@@ -1450,8 +1450,7 @@ footer {
       display: flex;
       font-family: "Work Sans", sans-serif;
       flex-direction: column;
-      gap: 20px;
-      /* align-items: center; */ }
+      gap: 20px; }
     footer .footer-container .quick-links,
     footer .footer-container .others {
       gap: 24px; }
@@ -1467,6 +1466,8 @@ footer {
         gap: 16px; }
         footer .footer-container .school-info .socials ion-icon {
           font-size: 28px; }
+      footer .footer-container .school-info .school-address {
+        text-align: center; }
     footer .footer-container h6 {
       font-size: 14px;
       text-transform: uppercase; }
@@ -1480,9 +1481,9 @@ footer {
 
 @media (max-width: 1200px) {
   footer {
-    padding: 56px; }
+    padding: 48px 24px; }
     footer .footer-container {
-      width: 85rem;
+      width: 100%;
       gap: 100px; } }
 
 @media (max-width: 900px) {
@@ -1971,8 +1972,10 @@ footer {
     .mission-title-block h2 {
       font-size: 36px;
       line-height: 1.2; }
+    .mission-title-block p {
+      font-size: 17px; }
   .transportation-info {
-    padding: 48px; }
+    padding: 48px 24px; }
   .mission-container {
     width: 100%; }
     .mission-container .mission-content-block {
@@ -2159,7 +2162,7 @@ footer {
     padding: 48px 36px; }
     .our-values .values-container {
       width: 100%;
-      grid-template-columns: 375px 375px;
+      grid-template-columns: 1fr 1fr;
       gap: 36px; }
       .our-values .values-container .values-third-column {
         grid-column: 1 / 3;
@@ -2167,7 +2170,7 @@ footer {
       .our-values .values-container .values-first-column {
         transform: translateY(0); }
         .our-values .values-container .values-first-column .card:nth-child(1) {
-          height: 60%; }
+          height: 65%; }
           .our-values .values-container .values-first-column .card:nth-child(1) .front-card div {
             height: 100%; }
             .our-values .values-container .values-first-column .card:nth-child(1) .front-card div img {
@@ -2310,7 +2313,8 @@ footer {
       width: 100%;
       align-items: center; }
       .our-team .our-team-container .our-team-container-title p {
-        width: 100%; }
+        width: 100%;
+        font-size: 17px; }
       .our-team .our-team-container .team-members-container {
         width: 80%;
         grid-template-columns: 235px 235px 235px;
@@ -2355,7 +2359,7 @@ footer {
 
 @media (max-width: 1200px) {
   .school-pledge {
-    padding: 48px; }
+    padding: 48px 24px; }
     .school-pledge .anthem-flex {
       gap: 100px; } }
 
