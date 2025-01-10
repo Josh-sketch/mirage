@@ -20,8 +20,8 @@ function mirage_files() {
   wp_enqueue_script('mirage-custom-script-6',  get_theme_file_uri('/build/index.js'), array("jquery"), '1.0', true);
   wp_enqueue_script('mirage-custom-script-7',  get_theme_file_uri('/script/carousel.js'), array(), false, true);
   wp_enqueue_script('mirage-custom-script-8', get_theme_file_uri('/script/accordion.js'), array(), false, true);
-  wp_enqueue_script('mirage-ionic-icons-module',  'http://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', array(), false, true);
-  wp_enqueue_script('mirage-ionic-icons-nonmodule',  'http://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', array(), false, true);  
+  wp_enqueue_script('mirage-ionic-icons-module',  '//unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', array(), false, true);
+  wp_enqueue_script('mirage-ionic-icons-nonmodule',  '//unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', array(), false, true);  
 
   wp_localize_script('mirage-custom-script-6', 'mirageSchoolThemeData', array(
     'themeUrl' => get_template_directory_uri(),
