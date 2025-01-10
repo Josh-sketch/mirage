@@ -60,6 +60,7 @@
           <ion-icon class="search-icon" name="search-outline"></ion-icon>
         </div>
         <ul class="mobile-main-nav-list">
+        <li><a href="<?php echo site_url() ?>">Home</a></li>
         <li><a href="<?php echo site_url('/explore') ?>">Explore</a></li>
             <li><a href="<?php echo site_url('/about-us') ?>">About</a></li>
             <li><a href="<?php echo site_url('/admissions') ?>">Admission</a></li>
