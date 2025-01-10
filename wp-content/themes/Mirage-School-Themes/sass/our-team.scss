@@ -70,7 +70,7 @@
 
 @media (max-width: 1200px) {
   .our-team {
-    padding: 48px;
+    padding: 48px 24px;
     .our-team-container {
       width: 100%;
       align-items: center;
@@ -81,9 +81,10 @@
         }
       }
       .team-members-container {
+        width: 80%;
         // width: 80%;
         grid-template-columns: 235px 235px 235px;
-        gap: 30px;
+        gap: auto;
       }
     }
   }

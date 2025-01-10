@@ -165,7 +165,7 @@
 
 @media (max-width: 1200px) {
   .our-history {
-    padding: 120px 48px;
+    padding: 48px 24px 120px 24px;
     .history-event {
       gap: 36px;
       &::after {
@@ -202,7 +202,7 @@
 
 @media (max-width: 900px) {
   .our-history {
-    padding: 24px 48px;
+    padding: 120px 24px 48px 24px;
     .history-event {
       padding: 96px 0 48px 0;
       display: flex;

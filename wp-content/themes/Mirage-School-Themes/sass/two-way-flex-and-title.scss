@@ -92,8 +92,12 @@
 }
 
 @media (max-width: 1200px) {
+  .our-mission {
+    padding: 48px 24px;
+  }
+
   .mission-title-block {
-    padding: 48px 56px;
+    padding: 48px 24px;
     h2 {
       font-size: 36px;
       line-height: 1.2;
@@ -105,7 +109,7 @@
   }
 
   .mission-container {
-    width: 80rem;
+    width: 100%;
     .mission-content-block {
       flex-direction: column-reverse;
       .mission-content-image {

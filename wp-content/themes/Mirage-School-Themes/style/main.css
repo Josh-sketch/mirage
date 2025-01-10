@@ -1681,10 +1681,10 @@ footer {
 
 @media (max-width: 1200px) {
   .from-the-head-of-school {
-    padding: 48px; }
+    padding: 24px; }
     .from-the-head-of-school .container-big {
       flex-direction: column;
-      width: 90%; }
+      width: 100%; }
       .from-the-head-of-school .container-big .left-side-1200 {
         width: 100%; }
         .from-the-head-of-school .container-big .left-side-1200 p {
@@ -1698,7 +1698,7 @@ footer {
 
 @media (max-width: 900px) {
   .from-the-head-of-school {
-    padding: 48px; }
+    padding: 24px; }
     .from-the-head-of-school .container-big .right-side-1200 img {
       width: 300px;
       height: 400px;
@@ -1833,7 +1833,7 @@ footer {
 
 @media (max-width: 1200px) {
   .our-history {
-    padding: 120px 48px; }
+    padding: 48px 24px 120px 24px; }
     .our-history .history-event {
       gap: 36px; }
       .our-history .history-event::after {
@@ -1862,7 +1862,7 @@ footer {
 
 @media (max-width: 900px) {
   .our-history {
-    padding: 24px 48px; }
+    padding: 120px 24px 48px 24px; }
     .our-history .history-event {
       padding: 96px 0 48px 0;
       display: flex;
@@ -1964,15 +1964,17 @@ footer {
       height: 100%; } }
 
 @media (max-width: 1200px) {
+  .our-mission {
+    padding: 48px 24px; }
   .mission-title-block {
-    padding: 48px 56px; }
+    padding: 48px 24px; }
     .mission-title-block h2 {
       font-size: 36px;
       line-height: 1.2; }
   .transportation-info {
     padding: 48px; }
   .mission-container {
-    width: 80rem; }
+    width: 100%; }
     .mission-container .mission-content-block {
       flex-direction: column-reverse; }
       .mission-container .mission-content-block .mission-content-image img {
@@ -2156,7 +2158,7 @@ footer {
   .our-values {
     padding: 48px 36px; }
     .our-values .values-container {
-      width: 786px;
+      width: 100%;
       grid-template-columns: 375px 375px;
       gap: 36px; }
       .our-values .values-container .values-third-column {
@@ -2303,15 +2305,16 @@ footer {
 
 @media (max-width: 1200px) {
   .our-team {
-    padding: 48px; }
+    padding: 48px 24px; }
     .our-team .our-team-container {
       width: 100%;
       align-items: center; }
       .our-team .our-team-container .our-team-container-title p {
         width: 100%; }
       .our-team .our-team-container .team-members-container {
+        width: 80%;
         grid-template-columns: 235px 235px 235px;
-        gap: 30px; } }
+        gap: auto; } }
 
 @media (max-width: 900px) {
   .our-team {
