@@ -1958,7 +1958,7 @@ footer {
       line-height: 1.2; }
     .mission-title-block p {
       font-size: 17px;
-      list-style: 1.7; }
+      line-height: 1.7; }
   .transportation-info {
     padding: 48px 24px; }
   .mission-container {
@@ -1970,7 +1970,7 @@ footer {
         height: 100%; }
       .mission-container .mission-content-block .mission-content-text p {
         font-size: 20px;
-        line-height: 1.7px; } }
+        line-height: 1.5; } }
 
 @media (max-width: 900px) {
   .mission-title-block {
