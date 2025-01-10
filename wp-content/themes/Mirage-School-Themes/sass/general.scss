@@ -35,10 +35,12 @@ h1 {
 
 .open {
   opacity: 0.8;
+  display: block;
 }
 
 .close {
   opacity: 0;
+  transform: translate(-100%, -100%);
 }
 
 .active {
