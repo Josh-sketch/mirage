@@ -79,6 +79,17 @@
   }
 }
 
+@media (max-width: 600px) {
+  .why-mirage {
+    padding: 24px 24px 0px 24px;
+  }
+  .explore-cta {
+    padding: 48px 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 300px) {
   .why-mirage {
     padding: 16px 16px 0px 16px;
