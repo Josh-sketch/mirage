@@ -148,13 +148,13 @@
 
   .mission-container {
     gap: 24px;
-    width: 90%;
+    width: 100%;
   }
 }
 
 @media (max-width: 600px) {
   .our-mission {
-    padding: 48px;
+    padding: 48px 24px;
   }
 
   .mission-title-block {
