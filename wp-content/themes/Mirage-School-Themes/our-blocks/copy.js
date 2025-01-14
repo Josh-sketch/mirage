@@ -10,7 +10,9 @@ registerBlockType("ourblocktheme/copy", {
 function EditComponent() {
   return (
     <div className="about-text">
-      <InnerBlocks allowedBlocks={["ourblocktheme/copytext"]} />
+      <InnerBlocks
+        allowedBlocks={["ourblocktheme/copytext", "ourblocktheme/buttonsblock"]}
+      />
     </div>
   );
 }

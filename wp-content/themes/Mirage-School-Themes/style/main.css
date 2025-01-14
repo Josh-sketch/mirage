@@ -795,6 +795,10 @@ h1 {
         font-size: 16px; }
       .about-mirage .about-mirage-content .about-text span {
         font-size: 12px; }
+      .about-mirage .about-mirage-content .about-text .button-div .first-set button a,
+      .about-mirage .about-mirage-content .about-text .button-div .second-set button a {
+        padding: 10px 8px;
+        font-size: 11px; }
     .about-mirage .motto {
       bottom: -32px;
       right: 5px; }
@@ -819,6 +823,15 @@ h1 {
       .about-mirage .about-mirage-content .about-text p,
       .about-mirage .about-mirage-content .about-text span {
         font-size: 15px; }
+      .about-mirage .about-mirage-content .about-text .button-div {
+        gap: 8px; }
+        .about-mirage .about-mirage-content .about-text .button-div .first-set,
+        .about-mirage .about-mirage-content .about-text .button-div .second-set {
+          gap: 8px; }
+          .about-mirage .about-mirage-content .about-text .button-div .first-set button a,
+          .about-mirage .about-mirage-content .about-text .button-div .second-set button a {
+            padding: 10px 5px;
+            font-size: 8px; }
     .about-mirage .motto svg text {
       font-size: 16px; }
     .about-mirage .motto svg > :first-child {

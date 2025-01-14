@@ -134,7 +134,7 @@ new JSXBlock('whiteandredsvg', true);
 new JSXBlock('titleblock', true);
 new JSXBlock('gallery', true);
 new JSXBlock('anthem', true, ['fallbackimage' => get_theme_file_uri('images/school-building.jpg')]);
-
+new JSXBlock('buttonsblock', true);
 
 
 add_action('rest_api_init', function () {

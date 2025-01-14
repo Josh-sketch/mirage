@@ -193,6 +193,17 @@
         span {
           font-size: 12px;
         }
+        .button-div {
+          .first-set,
+          .second-set {
+            button {
+              a {
+                padding: 10px 8px;
+                font-size: 11px;
+              }
+            }
+          }
+        }
       }
     }
     .motto {
@@ -231,6 +242,19 @@
         p,
         span {
           font-size: 15px;
+        }
+        .button-div {
+          gap: 8px;
+          .first-set,
+          .second-set {
+            gap: 8px;
+            button {
+              a {
+                padding: 10px 5px;
+                font-size: 8px;
+              }
+            }
+          }
         }
       }
     }
