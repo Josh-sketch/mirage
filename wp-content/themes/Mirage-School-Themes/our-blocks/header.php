@@ -21,7 +21,7 @@
       </div>
       <div class="home_page_navigation">
         <a href="<?php echo site_url(); ?>" class="logo">
-          <img class="mirage-logo" src="<?php echo get_theme_file_uri("images/mirage-logo.png") ?>" />
+          <img class="mirage-logo" src="<?php echo get_theme_file_uri("images/mirage-logo.avif") ?>" />
           <div class="school-name">
             <span>Mirage</span>
             <span>International</span>

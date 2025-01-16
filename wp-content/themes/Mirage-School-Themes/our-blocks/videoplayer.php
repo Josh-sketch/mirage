@@ -1,6 +1,6 @@
 <?php 
 if(!isset($attributes['videoURL'])) {
-   $attributes['videoURL'] = get_theme_file_uri("images/school-video.jpg");
+   $attributes['videoURL'] = get_theme_file_uri("images/school-video.avif");
 }
 ?>
 <div class="about-video">
