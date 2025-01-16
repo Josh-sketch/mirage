@@ -1,7 +1,7 @@
 <footer>
       <div class="footer-container">
         <div class="school-info">
-          <img src="<?php echo get_theme_file_uri("images/mirage-logo.png") ?>" />
+          <img src="<?php echo get_theme_file_uri("images/mirage-logo.avif") ?>" />
           <h6>Contact us</h6>
           <span class="school-address"
             >1, Mirage Street, Adekunle Avenue, Josh Country</span
