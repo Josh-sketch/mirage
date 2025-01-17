@@ -16,6 +16,18 @@
       left: -4%;
       z-index: -1;
     }
+    button {
+      background-color: #9f0000;
+      a {
+        color: #ddd;
+      }
+      &:hover {
+        background-color: #850000;
+        a {
+          color: #fff;
+        }
+      }
+    }
   }
   & > :nth-child(even) {
     flex-direction: row-reverse;
@@ -31,6 +43,18 @@
       bottom: 5%;
       right: -4%;
       z-index: -1;
+    }
+    button {
+      background-color: #222;
+      a {
+        color: #ddd;
+      }
+      &:hover {
+        background-color: darken(#000, 20%);
+        a {
+          color: #fff;
+        }
+      }
     }
   }
   .each-facility-container {
@@ -61,6 +85,18 @@
       ul {
         font-size: 18px;
         font-family: "Open Sans", sans-serif;
+      }
+      button {
+        width: 150px;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          padding: 16px 24px;
+          font-size: 16px;
+          // color: #fff;
+        }
       }
     }
   }

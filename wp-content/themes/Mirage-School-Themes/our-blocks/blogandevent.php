@@ -20,7 +20,7 @@
                 <?php echo wp_trim_words(get_the_content(), 50); ?>
                 </div>
                 <div class="btn">
-                <a class="read-more-btn" href="#">Read More</a>
+                <a class="read-more-btn" href="<?php the_permalink(); ?>">Read More</a>
                 </div>
               </div>
               </div>
@@ -48,7 +48,7 @@
           </div>
              
               <div>
-                <a href=""> See all blogs</a>
+                <a href="<?php echo site_url("/blogs") ?>"> See all blogs</a>
             </div>
 
             <div class="blog-right">

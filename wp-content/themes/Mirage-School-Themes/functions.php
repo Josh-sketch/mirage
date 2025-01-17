@@ -84,7 +84,7 @@ new placeholderBlock('titledescription', true);
 new placeholderBlock('listers', true);
 new placeholderBlock('cta', true);
 new placeholderBlock('curriculum', true);
-
+new placeholderBlock('blogs', true);
 
 
 class JSXBlock {
