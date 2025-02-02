@@ -2968,3 +2968,119 @@ footer {
   .curriculum-category-nav .event-nav-btn {
     font-size: 12px;
     padding: 16px; } }
+
+.blog-articles .blog-navigation {
+  width: 100%;
+  background-color: #a60000;
+  padding: 16px 56px; }
+  .blog-articles .blog-navigation div {
+    font-size: 16px;
+    display: flex;
+    gap: 8px;
+    color: #fff; }
+    .blog-articles .blog-navigation div span a {
+      text-decoration: none;
+      color: #fff; }
+
+.blog-articles .content {
+  padding: 72px;
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  gap: 200px; }
+  .blog-articles .content main article .blog-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; }
+    .blog-articles .content main article .blog-header h3 {
+      font-size: 48px;
+      font-family: "Teko", sans-serif;
+      font-weight: 500; }
+    .blog-articles .content main article .blog-header .blog-details {
+      display: flex;
+      gap: 56px;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #222; }
+      .blog-articles .content main article .blog-header .blog-details span {
+        font-size: 20px;
+        font-family: "Teko", sans-serif;
+        color: #8e6f3e;
+        font-weight: 300;
+        position: relative;
+        text-transform: uppercase; }
+        .blog-articles .content main article .blog-header .blog-details span::after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: -28px;
+          height: 100%;
+          width: 1px;
+          background-color: #222; }
+  .blog-articles .content main article .blog-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; }
+    .blog-articles .content main article .blog-content .blog-content-figure figure {
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      .blog-articles .content main article .blog-content .blog-content-figure figure img {
+        height: auto;
+        max-width: 80%; }
+    .blog-articles .content main article .blog-content .blog-content-figure figcaption {
+      padding-top: 16px;
+      text-align: center;
+      font-size: 16px;
+      font-family: "Teko", sans-serif;
+      font-style: italic;
+      font-weight: 300; }
+    .blog-articles .content main article .blog-content .text-content {
+      display: flex;
+      flex-direction: column;
+      font-size: 17px;
+      gap: 16px;
+      font-family: "Open San", sans-serif; }
+      .blog-articles .content main article .blog-content .text-content p {
+        line-height: 1.5; }
+  .blog-articles .content aside h3 {
+    font-size: 22px;
+    font-family: sans-serif;
+    padding: 24px 0px;
+    border-bottom: 1px solid #000; }
+  .blog-articles .content aside .each-related {
+    padding: 24px 0px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column; }
+    .blog-articles .content aside .each-related img {
+      height: 100px;
+      width: 150px; }
+    .blog-articles .content aside .each-related span {
+      font-size: 20px; }
+      .blog-articles .content aside .each-related span a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #222;
+        font-family: sans-serif;
+        font-weight: 700; }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 48px; }
+  .pagination .pagination-nav ul {
+    display: flex;
+    padding: 0px;
+    list-style: none;
+    gap: 16px; }
+    .pagination .pagination-nav ul li {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      background-color: #a60000;
+      color: #fff;
+      font-size: 24px;
+      justify-content: center;
+      align-items: center;
+      font-family: "Teko", sans-serif; }

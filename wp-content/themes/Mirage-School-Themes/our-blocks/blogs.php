@@ -19,7 +19,9 @@
         </div>
         <div class="facility-description">
           <h3><?php the_title(); ?></h3>
-          <?php wp_trim_words(the_content(), 50); ?>
+          <p>
+          <?php echo wp_trim_words(get_the_content(), 50); ?>
+       </p>
           <button><a href="<?php the_permalink(); ?>">Read More</a></button>
         </div>
   </div>

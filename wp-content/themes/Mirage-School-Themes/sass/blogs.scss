@@ -1,0 +1,126 @@
+.blog-articles {
+  .blog-navigation {
+    width: 100%;
+    background-color: #a60000;
+    padding: 16px 56px;
+    div {
+      font-size: 16px;
+      display: flex;
+      gap: 8px;
+      color: #fff;
+      span {
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .content {
+    padding: 72px;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    gap: 200px;
+    main {
+      article {
+        .blog-header {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          h3 {
+            font-size: 48px;
+            font-family: "Teko", sans-serif;
+            font-weight: 500;
+          }
+          .blog-details {
+            display: flex;
+            gap: 56px;
+            align-items: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #222;
+            span {
+              font-size: 20px;
+              font-family: "Teko", sans-serif;
+              color: #8e6f3e;
+              font-weight: 300;
+              position: relative;
+              text-transform: uppercase;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0px;
+                right: -28px;
+                height: 100%;
+                width: 1px;
+                background-color: #222;
+              }
+            }
+          }
+        }
+        .blog-content {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          .blog-content-figure {
+            figure {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              img {
+                height: auto;
+                max-width: 80%;
+              }
+            }
+            figcaption {
+              padding-top: 16px;
+              text-align: center;
+              font-size: 16px;
+              font-family: "Teko", sans-serif;
+              font-style: italic;
+              font-weight: 300;
+            }
+          }
+          .text-content {
+            display: flex;
+            flex-direction: column;
+            font-size: 17px;
+            gap: 16px;
+            font-family: "Open San", sans-serif;
+            p {
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+    aside {
+      h3 {
+        font-size: 22px;
+        font-family: sans-serif;
+        padding: 24px 0px;
+        border-bottom: 1px solid #000;
+      }
+      .each-related {
+        padding: 24px 0px;
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        img {
+          height: 100px;
+          width: 150px;
+        }
+        span {
+          font-size: 20px;
+          a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #222;
+            font-family: sans-serif;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
