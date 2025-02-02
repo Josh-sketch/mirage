@@ -8,7 +8,9 @@
 <section class="our-facilities">
 <?php 
  $posts = new WP_Query(array(
-   'post_type' => 'post'
+   'paged' => get_query_var('paged',  1),
+   'post_type' => 'post',
+   'posts_per_page' => '2',
  ));
  while($posts->have_posts()) {
   $posts->the_post();

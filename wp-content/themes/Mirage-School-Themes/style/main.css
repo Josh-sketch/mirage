@@ -3069,18 +3069,19 @@ footer {
   display: flex;
   justify-content: center;
   padding: 48px; }
-  .pagination .pagination-nav ul {
+  .pagination .pagination-nav .pagination-container {
     display: flex;
     padding: 0px;
     list-style: none;
     gap: 16px; }
-    .pagination .pagination-nav ul li {
+    .pagination .pagination-nav .pagination-container .page-numbers {
       display: flex;
-      width: 50px;
-      height: 50px;
+      padding: 16px 24px;
       background-color: #a60000;
       color: #fff;
       font-size: 24px;
       justify-content: center;
       align-items: center;
       font-family: "Teko", sans-serif; }
+    .pagination .pagination-nav .pagination-container .current {
+      color: #e2c629f3; }
